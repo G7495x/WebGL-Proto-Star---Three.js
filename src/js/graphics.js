@@ -112,10 +112,6 @@ particles.rotation.x=22.5*piBy180
 // particles.rotation.z=22.5*piBy180
 scene.add(particles)
 
-const start=new Date().getTime()/1000 // Timestamp of start
-let then=new Date().getTime()/1000    // Timestamp of last frame
-let time=0                            // Time since start
-
 const circleGeometry=new THREE.Geometry()
 for(let i=0;i<100;++i){
 	const theta=Math.PI*2*i/100
@@ -133,6 +129,10 @@ circle2.rotation.set(15*piBy180,0,7.5*piBy180)
 circle2.scale.set(6,6,6)
 scene.add(circle2)
 
+const start=new Date().getTime()/1000 // Timestamp of start
+let then=new Date().getTime()/1000    // Timestamp of last frame
+let time=0                            // Time since start
+
 const graphicsUpdate=()=>{
 	const now=new Date().getTime()/1000
 	const deltaT=now-then
@@ -148,4 +148,3 @@ const graphicsUpdate=()=>{
 
 	then=now
 }
-
