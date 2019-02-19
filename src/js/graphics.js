@@ -9,7 +9,7 @@ const scene=new THREE.Scene()
 const camera=new THREE.PerspectiveCamera()
 camera.position.set(0,0,15)
 camera.lookAt(0,0,0)
-const controls=new THREE.OrbitControls(camera,rendererEle)
+// const controls=new THREE.OrbitControls(camera,rendererEle)
 
 const setupRenderer=()=>{
 	let viewportWidth=document.body.offsetWidth
